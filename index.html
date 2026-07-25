@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>花火帳 -HANABICHO-</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <div id="skyWrap">
+    <div id="topbar">
+      <div id="brand" title="?">花火帳<span>HANABICHO・打上記録</span></div>
+      <div id="currencyBox">
+        <div class="seal">玉</div>
+        <div id="currencyVal">0</div>
+        <div id="currencyUnit">花火玉</div>
+      </div>
+      <button id="emberBtn" title="?"></button>
+    </div>
+    <div id="mapTabs">
+      <button data-map="river" class="active">川辺</button>
+      <button data-map="mountain">山</button>
+      <button data-map="festival">祭り会場</button>
+    </div>
+    <canvas id="sky"></canvas>
+    <div id="hint">画面をタップして花火を打ち上げよう</div>
+    <div id="cpsLine" style="position:absolute; left:14px; bottom:14px; z-index:4;"></div>
+    <button id="launchBtn">打ち上げ</button>
+  </div>
+
+  <div id="panel">
+    <div id="tabBar">
+      <button data-tab="artisans" class="active">職人<span class="sub">自動生産</span></button>
+      <button data-tab="shells">玉<span class="sub">威力強化</span></button>
+      <button data-tab="powder">火薬<span class="sub">倍率強化</span></button>
+      <button data-tab="evolution">進化<span class="sub">形状</span></button>
+    </div>
+    <div id="tabContent"></div>
+    <div id="prestigeBox">
+      <div class="txt">来年へ継承すると<b id="prestigeGain">+0</b> 伝統点(永続倍率+2%/点)<br>生涯獲得: <span id="lifetimeEarned">0</span></div>
+      <button id="prestigeBtn">来年へ継承</button>
+    </div>
+    <div id="footerRow">
+      <span id="rankLine">称号: 見習い</span>
+      <button id="resetBtn">最初からやり直す</button>
+    </div>
+  </div>
+</div>
+
+<div id="fuzei">
+  <div id="fuzeiLabel">風 情 モ ー ド</div>
+  <button id="fuzeiBack">戻る</button>
+  <button id="fuzeiBtn">打ち上げる</button>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
